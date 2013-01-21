@@ -23,6 +23,8 @@
  * @license      GPLv2, see www.gnu.org/licenses/gpl-2.0.html
  * @version      $Revision$
  */
+header("Access-Control-Allow-Origin: http://prelude.concerto-signage.org");
+header("Access-Control-Allow-Methods: GET");
 header("Refresh: 5; URL=index.php?mac={$_GET['mac']}");
 $tmp = str_split(str_pad(preg_replace('/[^0-9A-Fa-f]/', '', $_GET['mac']), 12, "0", STR_PAD_LEFT), 2);
 $mac = sprintf("%s:%s:%s:%s:%s:%s", $tmp[0], $tmp[1], $tmp[2], $tmp[3], $tmp[4], $tmp[5])

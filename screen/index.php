@@ -38,6 +38,8 @@ if($screenId < 0){
     header("Location: missing.php?mac={$_GET['mac']}");
     exit(0);
 }
+header("Access-Control-Allow-Origin: http://prelude.concerto-signage.org");
+header("Access-Control-Allow-Methods: GET");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
